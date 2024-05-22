@@ -10,13 +10,13 @@
 :root {
     /* typography */
     --font-family: "Inter", sans-serif;
-    --font-size-base: 16px;
-    --font-size-md: 18px;
-    --font-size-lg: 20px;
-    --font-size-xl: 24px;
-    --font-size-4xl: 60px;
-    --font-size-3xl: 36px;
-    --font-size-2xl: 30px;
+
+    --font-size-base: 18px;
+    --font-size-md: 24px;
+    --font-size-lg: 46px;
+    --font-size-s: 14px;
+
+   
 
     /* font-weight: */
     --font-weight-lg: 600;
@@ -24,10 +24,10 @@
     --font-weight-s: 400;
 
     /* color */
-    --color-primary: #444CE7;
-    --color-secondary: #3538CD;
-    --color-heading: #101828;
-    --color-text: #475467;
+    --color-primary: #FF5331;
+    --color-secondary: #AAA7B1;
+    --color-heading: #191720;
+    --color-text: #AAA7B1;
 
     /* layout */
     --container-width: 1150px;
@@ -35,11 +35,12 @@
 
     /* line height */
 
+
 }
 
 body {
     font-family: 'Inter', sans-serif;
-    max-width: 1560px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -47,12 +48,11 @@ button {
     font-family: inherit
 }
 .navbar {
-    background-color: rgb(161, 138, 107);
+    background-color:#fff;
     display: flex;
     
-    width: 90%;
+    width: 100%;
     padding: 60px 220px;
-
 
     position: fixed;
     top: 0; 
@@ -60,7 +60,7 @@ button {
     right: 0;
     justify-content: space-between;
     align-items: center;
-   margin: 0 auto;
+    margin: 0 auto;
 }
 
 
@@ -73,6 +73,7 @@ button {
     list-style: none;
     display: flex;
     gap: 45px;
+    flex-wrap: wrap;
 
 }
 
@@ -81,11 +82,13 @@ button {
 }
 
 .nav-links a {
-    font-size: 14px;
+    /* font-size: 14px; */
+    font-size: var(--font-size-s);
     font-style: normal;
     font-weight: 500;
+    font-weight: var(--font-weight-md);
     line-height: 28px;
-    color: #191720;
+    color: var(--color-heading);
 }
 
 .auth-buttons {
@@ -104,17 +107,21 @@ button {
     font-family: Inter;
     font-size: 16px;
     font-style: normal;
-    font-weight: 600;
+  
+    font-weight: var(--font-weight-lg);
     line-height: 28px;
+}
+.login-btn{
+    color: #000;
 }
 
 .signup-btn {
-    color: var(--White, #FFF);
+    color: #FFF;
     text-align: center;
     font-family: Inter;
     font-size: 16px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: var(--font-weight-lg);
     line-height: 28px;
     border-radius: 36px;
     background: #E94339;
@@ -131,20 +138,20 @@ button {
     justify-content: center;
     align-items: center;
     margin-top: 210px;
+    flex-wrap: wrap;
 
 }
 
 .container {
     /* text-align: center; */
-    background: white;
     padding: 50px 0;
-    background-color: #a7b3c4;
+    /* background-color: #a7b3c4; */
     width: 580px;
 }
 
 .container h1 {
-    color: #191720;
-    font-family: Inter;
+  
+    color: var(--color-heading);
     font-size: 61px;
     font-style: normal;
     font-weight: 700;
@@ -153,11 +160,10 @@ button {
 }
 
 .container p {
-    color: #191720;
-    font-family: Inter;
-    font-size: 18px;
+    color: var(--color-heading);
+    font-size: var(--font-size-base);
     font-style: normal;
-    font-weight: 400;
+    font-weight: var(--font-weight-s);
     line-height: 30px;
     letter-spacing: -0.18px;
     margin-bottom: 30px;
@@ -179,10 +185,11 @@ button {
     background: #F6F6F6;
     outline: none;
     border: none;
-    font-size: 14px;
+   
+    font-size: var(--font-size-s);
     font-style: normal;
-    font-weight: 500;
-
+    font-weight: var(--font-weight-md);
+    
     letter-spacing: 0.07px;
     padding: 24px 24px;
 }
@@ -192,12 +199,13 @@ button {
     border: none;
     cursor: pointer;
     border-radius: 56px;
-    background: #FF5331;
+   
+    background: var(--color-primary);
     box-shadow: 0px 10px 20px -10px rgba(234, 234, 234, 0.40);
     color: #FFF;
-    font-size: 18px;
+    font-size: var(--font-size-base);
     font-style: normal;
-    font-weight: 600;
+    font-weight: var(--font-weight-lg);
     line-height: normal;
     padding: 15px 20px;
     margin-left: -145px;
@@ -240,36 +248,36 @@ button {
 }
 
 .numbers-of-order h1 {
-    color: #191720;
-
+   
+    color: var(--color-heading);
     text-align: center;
-    font-family: Inter;
-    font-size: 46px;
+    font-size: var(--font-size-lg);
     font-style: normal;
-    font-weight: 600;
+    font-weight: var(--font-weight-lg);
     line-height: 58px;
-    /* 126.087% */
+
     letter-spacing: -0.46px;
     text-transform: capitalize;
     margin-bottom: 17px;
 }
 
 .number {
-    color: #FF5331;
 
-    font-size: 46px;
+    color: var(--color-primary);
+    font-size: var(--font-size-lg);
     font-style: normal;
     font-weight: 700;
     line-height: 58px;
     letter-spacing: -0.46px;
-    text-transform: lowercase;
+ 
 }
 
 .numbers-of-order p {
-    color: #191720;
-    font-size: 18px;
+  
+    color: var(--color-heading);
+    font-size: var(--font-size-base);
     font-style: normal;
-    font-weight: 400;
+    font-weight: var(--font-weight-s);
     line-height: 30px;
     /* 166.667% */
     letter-spacing: -0.18px;
@@ -280,22 +288,25 @@ button {
 .food-item-section {
     max-width: 1310px;
     margin: 0 auto;
-    background-color: #729972;
+    /* background-color: #729972; */
+   
 }
 
 .food-item-section-one {
     display: flex;
     gap: 32px;
     justify-content: flex-end;
+    flex-wrap: wrap;
 }
 
 
 /* foods */
 
 .foods {
-    background-color: #a7b3c4;
+    /* background-color: #a7b3c4; */
     display: flex;
     gap: 32px;
+    flex-wrap: wrap;
 }
 
 .food img {
@@ -320,15 +331,13 @@ button {
 }
 
 .food p {
-    color: #191720;
-
+   
+    color: var(--color-heading);
     text-align: center;
-    font-family: Inter;
-    font-size: 24px;
+    font-size: var(--font-size-md);
     font-style: normal;
-    font-weight: 500;
+    font-weight: var(--font-weight-md);
     line-height: 24px;
-    /* 100% */
     letter-spacing: -0.24px;
 }
 
@@ -339,7 +348,7 @@ button {
 .foot-item-details {
     width: 568px;
     border-radius: 28px;
-    background: #c58e8e;
+    background: #FAFAFA;
     padding: 38px 98px 0px 33px;
 }
 
@@ -351,17 +360,16 @@ button {
 .foot-item-details h2 {
     color: #323232;
 
-    font-family: Inter;
     font-size: 25.8px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: var(--font-weight-md);
     line-height: normal;
     letter-spacing: -0.258px;
     width: 437px;
 }
 
 .deals-text {
-    color: #FF5331;
+    color: var(--color-primary);
 }
 
 .free-delivery-text {
@@ -372,6 +380,7 @@ button {
 .food-item-section-two {
     display: flex;
     margin-top: 50px;
+    flex-wrap: wrap;
 
 }
 
@@ -381,11 +390,9 @@ button {
 
 .food-info p {
     color: #494949;
-
-    font-family: Inter;
     font-size: 23px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: var(--font-weight-s);
     line-height: 34px;
 }
 
@@ -399,14 +406,12 @@ button {
     color: #2E2C49;
 
     text-align: center;
-    font-family: Inter;
-    font-size: 46px;
+    font-size: var(--font-size-lg);
     font-style: normal;
-    font-weight: 600;
+    font-weight: var(--font-weight-lg);
     line-height: 46px;
-    /* 100% */
     letter-spacing: 0.23px;
-    margin-bottom: 60px;
+    margin-bottom: 100px;
     margin-top: 195px;
 }
 
@@ -417,13 +422,11 @@ button {
 }
 
 .order-icon p {
-    color: #191720;
-
+    color: var(--color-heading);
     text-align: center;
-    font-family: Inter;
-    font-size: 24px;
+    font-size: var(--font-size-md);
     font-style: normal;
-    font-weight: 500;
+    font-weight: var(--font-weight-md);
     line-height: 30px;
 }
 
@@ -439,13 +442,11 @@ button {
 }
 
 .order-icon h4 {
-    color: #FF5331;
-
+    color: var(--color-primary);
     text-align: center;
-    font-family: Inter;
     font-size: 43.829px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: var(--font-weight-lg);
     line-height: normal;
     letter-spacing: -0.438px;
     margin-top: -95px;
@@ -456,8 +457,7 @@ button {
 
 /* clint-feedback-section */
 .clint-feedback-section {
-    /* margin: 0 auto;
-    text-align: center; */
+  
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -481,7 +481,7 @@ button {
     text-align: center;
     font-size: 16px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: var(--font-weight-s);
     line-height: 26px;
     max-width: 532px;
 }
@@ -489,9 +489,9 @@ button {
 .clint-feedback-section p {
     color: #000;
     text-align: center;
-    font-size: 24px;
+    font-size: var(--font-size-md);
     font-style: italic;
-    font-weight: 500;
+    font-weight: var(--font-weight-md);
     line-height: 34px;
     max-width: 790px;
     margin-bottom: 42px;
@@ -500,9 +500,9 @@ button {
 .clint-feedback-section h4 {
     color: #111;
     text-align: center;
-    font-size: 18px;
+    font-size: var(--font-size-base);
     font-style: normal;
-    font-weight: 600;
+    font-weight: var(--font-weight-lg);
     line-height: normal;
     letter-spacing: -0.18px;
 }
@@ -512,7 +512,7 @@ button {
     text-align: center;
     font-size: 14px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: var(--font-weight-s);
     line-height: normal;
     letter-spacing: -0.14px;
 }
@@ -535,19 +535,20 @@ button {
 .contact-section {
     display: flex;
     flex-direction: row;
-    gap: 248px;
-    background: #ddaea5;
-    /* justify-content: space-between; */
+    gap: 148px;
+    background: #FFEFEC;
+    justify-content: space-around;
     align-items: center;
     padding: 103px 91px;
+    flex-wrap: wrap;
 
 }
 
 .contact-info h1 {
     color: #000;
-    font-size: 46px;
+    font-size: var(--font-size-lg);
     font-style: normal;
-    font-weight: 600;
+    font-weight: var(--font-weight-lg);
     line-height: 58px;
     /* 126.087% */
     letter-spacing: 0.23px;
@@ -557,9 +558,8 @@ button {
     color: #000;
     font-size: 16px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: var(--font-weight-s);
     line-height: 26px;
-    /* 162.5% */
     letter-spacing: 0.08px;
 }
 
@@ -586,12 +586,14 @@ button {
     gap: 60px;
     justify-content: space-evenly;
     padding-top: 128px;
+    flex-wrap: wrap;
 }
 .footer-images{
     display: flex;
     flex-direction: column;
     gap: 80px;
     margin-left: 80px;
+    flex-wrap: wrap;
 }
 .footer-pizza-logo img{
     
@@ -601,6 +603,7 @@ button {
 .footer-boxs {
     display: flex;
     gap: 120px;
+    flex-wrap: wrap;
 }
 
 .footer-links {
@@ -612,20 +615,18 @@ button {
 
 .footer-links h3 {
     color: #FFF;
-    font-family: Inter;
-    font-size: 17.756px;
+    font-size: var(--font-size-base);
     font-style: normal;
-    font-weight: 600;
+    font-weight: var(--font-weight-lg);
     line-height: 26.633px;
-    /* 150% */
     margin-bottom: 10px;
 }
 
 .footer-links a span {
     color: #B5B2B2;
-    font-size: 17.756px;
+    font-size: var(--font-size-base);
     font-style: normal;
-    font-weight: 400;
+    font-weight: var(--font-weight-s);
     line-height: 32.182px;
     opacity: 0.75;
 }
@@ -636,15 +637,15 @@ button {
     justify-content: space-between;
     margin-top: 167px;
     padding: 0px 152px 110px 160px;
+    flex-wrap: wrap;
     
 }
 
 .footer-last-section p {
     color: #B5B2B2;
-    font-family: Inter;
     font-size: 15.536px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: var(--font-weight-s);
     line-height: 24.414px;
    
 }
@@ -652,16 +653,17 @@ button {
 .footer-page-links {
     display: flex;
     gap: 40px;
+    flex-wrap: wrap;
 
 }
 
 .footer-page-links a span {
     color: #B5B2B2;
     text-align: right;
-    font-family: Inter;
-    font-size: 17.756px;
+
+    font-size: var(--font-size-base);
     font-style: normal;
-    font-weight: 400;
+    font-weight: var(--font-weight-s);
     line-height: 26.633px;
    
 }
@@ -676,3 +678,43 @@ footer {
     width: 182px;
     height: 68px;
 }
+
+
+
+@media only screen and (max-width: 1068px) {
+    /* For mobile phones: */
+    
+
+   .nav-links{
+    display: none;
+   }
+   .food-item-section{
+    margin: 0 40px;
+
+   }
+   .food-info{
+    margin: 40px 0;
+   }
+   .footer-boxs{
+    margin: 0 90px;
+   }
+   .food-item-section-two{
+    margin: 10px 0;
+   }
+   
+
+  }
+
+  @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .footer-page-links{
+        flex-direction: column;
+        margin-top: 50px;
+       }
+       .order-icons{
+          margin: 0 40px;
+       }
+       .clint-feedback-section{
+        margin:0 40px;
+       }
+  }
